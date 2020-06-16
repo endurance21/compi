@@ -1,35 +1,36 @@
 #include<iostream>
-#include<math.h> 
+#include<cmath> 
 using namespace std;
 
 int main(){
-    int N;
-    cin>>N;
-    int arr[N];
+    int T;
+    cin>>T;
+    while(T--){
+        int N ,i = 0 , currSum = 0 ,maxSum = 0; 
 
-    for(int i = 0 ; i < N ; i++){
-        cin>>arr[i];
-    }
-    int i = 0 , currSum = 0 ,maxSum = 0; 
-    cout<<maxSum<<endl;
-    while(i < N ){
+        cin>>N;
+        int arr[N];
 
-        if( currSum <= 0 ){
-            currSum = arr[i];
-            maxSum = max(maxSum,currSum);
-           
+        for(int i = 0 ; i < N ; i++){
+            cin>>arr[i];
         }
-        else if( currSum > 0){
-            currSum+= arr[i];
-            maxSum = max(maxSum,currSum);
+        while(i < N ){
+
+            if( currSum <= 0 ){
+                currSum = arr[i];
+                maxSum = max(maxSum,currSum);
+            
+            }
+            else if( currSum > 0){
+                currSum+= arr[i];
+                maxSum = max(maxSum,currSum);
+            }
+        
+            i++;
         }
-     
-         i++;
 
-
+        cout<<maxSum;
 
     }
-
-    cout<<maxSum;
     return 0;
 }
