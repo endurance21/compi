@@ -1,1 +1,1 @@
-# solutions to `GFG MUST TO DO QUESTIONS`
+# practise problems for competative coding ! 
